@@ -1,5 +1,37 @@
 {
-  "rewrites": [
-    { "source": "/((?!favicon\\.ico|favicon\\.png|sitemap\\.xml|assets/.*|.*\\.(?:jpg|jpeg|png|svg|webp|pdf)).*)", "destination": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ralitsahristova.com"
+        }
+      ],
+      "destination": "https://ralitsahristova.com/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/app.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
   ]
 }
