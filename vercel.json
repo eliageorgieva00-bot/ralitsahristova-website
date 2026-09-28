@@ -12,6 +12,22 @@
       ],
       "destination": "https://ralitsahristova.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "https://ralitsahristova.com/za-advokata",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "https://ralitsahristova.com/za-advokata",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/assets/documents/:file",
+      "destination": "/:file"
     }
   ],
   "headers": [
