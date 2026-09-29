@@ -2,6 +2,8 @@
 <html lang="bg">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<style>html.js,html.js body{background:#0f1a2e!important}html.js #pr{visibility:hidden}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Медицински адвокат Ралица Христова — правен партньор на лечебните заведения</title>
 <meta name="description" content="Адвокат Ралица Христова — 27 години специализиран опит в медицинското право. Правно съдействие и процесуално представителство на болници, лечебни заведения, лекари и пациенти. Консултации в София, Пловдив, Варна, Бургас, Враца и Русе, както и онлайн.">
@@ -102,7 +104,7 @@
   var p = fetch('app.html', {credentials:'omit'}).then(function(r){ return r.ok ? r.text() : null; }).catch(function(){ return null; });
   function swap(){
     p.then(function(html){
-      if (!html) return;
+      if (!html) { document.documentElement.classList.remove('js'); return; }
       document.open(); document.write(html); document.close();
       apply();
       var n = 0;

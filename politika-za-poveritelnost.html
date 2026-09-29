@@ -2,6 +2,8 @@
 <html lang="bg">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<style>html.js,html.js body{background:#0f1a2e!important}html.js #pr{visibility:hidden}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Политика за поверителност — адв. Ралица Христова</title>
 <meta name="description" content="Как се обработват личните данни, предоставени чрез формата за контакт, по имейл или телефон — в съответствие с Регламент (ЕС) 2016/679 (GDPR), Закона за защита на личните данни и Закона за адвокатурата.">
@@ -70,7 +72,7 @@
   var p = fetch('app.html', {credentials:'omit'}).then(function(r){ return r.ok ? r.text() : null; }).catch(function(){ return null; });
   function swap(){
     p.then(function(html){
-      if (!html) return;
+      if (!html) { document.documentElement.classList.remove('js'); return; }
       document.open(); document.write(html); document.close();
       apply();
       var n = 0;

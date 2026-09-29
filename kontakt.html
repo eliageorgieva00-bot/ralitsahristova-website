@@ -2,6 +2,8 @@
 <html lang="bg">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className+=' js';</script>
+<style>html.js,html.js body{background:#0f1a2e!important}html.js #pr{visibility:hidden}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Контакт — заявете консултация при медицински адвокат</title>
 <meta name="description" content="Свържете се с адвокат Ралица Христова за консултация по медицинско право. Телефон + 359 888 715 954, имейл ralitsahristova.team@gmail.com, офис в Русе. Работно време понеделник – петък, 10:00 – 16:00 ч.">
@@ -77,7 +79,7 @@
   var p = fetch('app.html', {credentials:'omit'}).then(function(r){ return r.ok ? r.text() : null; }).catch(function(){ return null; });
   function swap(){
     p.then(function(html){
-      if (!html) return;
+      if (!html) { document.documentElement.classList.remove('js'); return; }
       document.open(); document.write(html); document.close();
       apply();
       var n = 0;
